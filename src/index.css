@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-cafe-bg: #FDFBF7;
+  --color-cafe-dark: #2D241E;
+  --color-cafe-accent: #D4A373;
+  --color-cafe-warm: #E9EDC9;
+  --color-cafe-fun-pink: #FFB4B4;
+  --color-cafe-fun-blue: #B4E4FF;
+  --color-cafe-fun-yellow: #F9E2AF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cafe-bg text-cafe-dark font-sans;
+  }
+}
+
+.cafe-card {
+  @apply rounded-[2.5rem] shadow-xl shadow-cafe-dark/5 border border-cafe-dark/5 transition-all hover:shadow-2xl hover:-translate-y-1;
+}
+
+.cafe-button {
+  @apply px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 active:scale-95;
+}
+
+.section-padding {
+  @apply py-24 md:py-32 px-6;
+}
